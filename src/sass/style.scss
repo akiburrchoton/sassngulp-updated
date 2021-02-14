@@ -27,6 +27,7 @@
                 color: #fff;
                 font-size: 26px;
                 line-height: 44px;
+                letter-spacing: .02em;
                 position: absolute;
                 z-index: 5;
             }
@@ -41,40 +42,20 @@
                 z-index: 2;
                 background: linear-gradient(0deg,rgba(89,95,112,.25),rgba(89,95,112,.25));
             }
-        }
-        // .slide{
-            
-        //     background-position: center;
-        //     background-repeat: repeat;
-        //     background-size: 10%;
-            
-        // }
-        .img-1{
-            background: url("../img/slider-1.webp");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            // @extend .slider-cell;
-        }
-        .img-2{
-            background: url("../img/slider-2.webp");
-            
-        }
-        .img-3{
-            background: url("../img/slider-3.webp");
-            
-        }
-
-        
-        
-    }
-
-
-    
-    
-    
+        }     
+    }  
 }
+
+
 // Slider Items Custom CSS
+.flickity-button {
+    position: absolute;
+    background: rgba(255,255,255,0);
+
+    &:hover{
+        background: rgba(255, 255, 255, 0);
+    }
+}
 .flickity-prev-next-button.next {
     top: unset;
     bottom: 30px;
@@ -85,4 +66,23 @@
     bottom: 30px;
     left: unset;
     right: 120px;
+    
+}
+
+.flickity-prev-next-button{
+    border: 1px #b5b5b5 solid;
+    width: 40px;
+    height: 40px;
+
+    .flickity-button-icon{
+        width: 45%;
+        height: 50%;
+        top: 25%;
+        left: 25%;
+
+    }
+}
+ 
+.flickity-button-icon {
+    fill: #fff;
 }
