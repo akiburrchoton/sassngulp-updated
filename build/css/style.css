@@ -13,6 +13,11 @@ body {
       display: flex;
       justify-content: center;
       align-items: center; }
+      @media (max-width: 1080px) {
+        #hero-section .slider-container .slider-cell .background-image img {
+          height: 100%;
+          object-fit: cover;
+          object-position: left; } }
       #hero-section .slider-container .slider-cell .slider-caption {
         font-family: "Manrope", sans-serif;
         width: 835px;
@@ -22,15 +27,13 @@ body {
         letter-spacing: .02em;
         position: absolute;
         z-index: 5; }
-      #hero-section .slider-container .slider-cell::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        background: linear-gradient(0deg, rgba(89, 95, 112, 0.25), rgba(89, 95, 112, 0.25)); }
+      @media (max-width: 1080px) {
+        #hero-section .slider-container .slider-cell {
+          height: auto; } }
+  @media (max-width: 1080px) {
+    #hero-section {
+      height: auto;
+      margin-bottom: 450px; } }
 
 .flickity-button {
   position: absolute;
