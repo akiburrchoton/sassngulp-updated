@@ -5,7 +5,7 @@ var flkty = new Flickity( elem, {
   contain: true,
   fade: true,
   draggable: false,
-  autoPlay: 123456,
+  autoPlay: 50000,
   pageDots: false,
   pauseAutoPlayOnHover: false,
 });

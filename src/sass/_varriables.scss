@@ -2,3 +2,9 @@ $font-main: 'Manrope', sans-serif;
 $title-color: #2C2C2B;
 $description-color: #868686;
 $brand-color: #1c9594;
+
+// Media Query Devices
+$desktop: 1200px; // col-xl
+$laptop: 1024px; // col-lg
+$tablet: 768px; // col-md
+$phone: 480px; // col-sm

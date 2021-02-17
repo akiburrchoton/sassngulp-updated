@@ -39,6 +39,7 @@ function watcher(cb){
 }
 function server(cb){
   browserSync.init({
+    watch: true,
     notify: false,
     open: false,
     server: {
@@ -49,4 +50,4 @@ function server(cb){
 }
 
 
-exports.default = series(html, css, js, server, watcher)
+exports.default = series(html, css, js,watcher, server)

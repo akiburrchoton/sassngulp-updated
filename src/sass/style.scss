@@ -2,49 +2,61 @@
 @import "varriables";
 
 
-#hero-section{
-    
+#hero-section {
+
     width: 100%;
     height: 100vh;
-    
+
     position: relative;
     // background-color: red;
 
-    .slider-container{
+    .slider-container {
         height: 100%;
 
-        .slider-cell{
+        .slider-cell {
+            max-width: 100vw;
             width: 100%;
+            max-height: 100vh;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            
-            .background-image{
-                
-                @media (max-width: 1080px){
-                    
-                    img{
-                        height: 100%;
+
+            .background-image {
+
+                @media (max-width: 1080px) {
+                    img {
+                        height: 100vh;
+                        width: 100vw;
                         object-fit: cover;
                         object-position: left;
                     }
                 }
             }
 
-            .slider-caption{
+            .slider-caption {
                 // margin: 0 auto;
                 font-family: $font-main;
-                width: 835px;
+                max-width: 835px;
                 color: #fff;
                 font-size: 26px;
                 line-height: 44px;
                 letter-spacing: .02em;
                 position: absolute;
                 z-index: 5;
-                @media (max-width: 1080px){
-                    
+
+                @media screen and (max-width:1080px) {
+                    padding: 0 30px;
+                    font-size: 25px;
+                    line-height: 1.7;
                 }
+
+                @media screen and (max-width:767px) {
+                    // color: blue;
+                    font-size: 20px;
+                }
+
+
             }
 
             // &::before{
@@ -61,44 +73,51 @@
             @media (max-width: 1080px) {
                 height: auto;
             }
-        }     
-    }  
 
-    @media (max-width: 1080px){
-        height: auto;
-        margin-bottom: 450px;
+            @media (max-width: 767px) {
+                // width: auto;
+            }
+        }
     }
+
+    @media (max-width: 640px) {
+        height: 100vh;
+    }
+
+
 }
 
 
 // Slider Items Custom CSS
 .flickity-button {
     position: absolute;
-    background: rgba(255,255,255,0);
+    background: rgba(255, 255, 255, 0);
 
-    &:hover{
+    &:hover {
         background: rgba(255, 255, 255, 0);
     }
 }
+
 .flickity-prev-next-button.next {
     top: unset;
     bottom: 30px;
     right: 60px;
-  }
-.flickity-prev-next-button.previous{
+}
+
+.flickity-prev-next-button.previous {
     top: unset;
     bottom: 30px;
     left: unset;
     right: 120px;
-    
+
 }
 
-.flickity-prev-next-button{
+.flickity-prev-next-button {
     border: 1px #b5b5b5 solid;
     width: 40px;
     height: 40px;
 
-    .flickity-button-icon{
+    .flickity-button-icon {
         width: 45%;
         height: 50%;
         top: 25%;
@@ -106,7 +125,7 @@
 
     }
 }
- 
+
 .flickity-button-icon {
     fill: #fff;
 }
