@@ -1,4 +1,5 @@
 @import "base";
+@import "mixin";
 @import "varriables";
 
 
@@ -138,18 +139,27 @@
 #parallax{
     max-height: 100vh;
     height: 100%;
-
+    
+    @media screen and (max-width:767px) {
+        height: auto;
+    }
     .container{
         display: flex;
         align-items: center;
-        padding: 100px 30px;
+        padding: 100px 0px;
 
         @media screen and (max-width:1080px) {
-            max-width: 720px;
+            max-width: 700px;
+            margin: 0;
+            padding: 0 30px;
         }
     
         @media screen and (max-width:767px) {
-            
+            max-width: 100vw;
+            width: 100%;
+            padding:100px 20px;
+            display: flex;
+            flex-direction: column-reverse!important;
         }
     }
 
@@ -158,6 +168,17 @@
         width: 480px;
         margin-right: 74px;
     
+
+        @media screen and (max-width:1080px) {
+            width: 45%;
+            margin-right: 55px;
+        }
+
+        @media screen and (max-width:767px) {
+            width: 100%;
+            margin: 0;
+        }
+
         .content-title {
             font-family: $font-main;
             font-size: 50px;
@@ -212,14 +233,7 @@
             
         }
 
-        @media screen and (max-width:1080px) {
-            width: 50%;
-            margin-right: 55px;
-        }
-
-        @media screen and (max-width:767px) {
-            width: 50%;
-        }
+        
     }
     
     .image {
@@ -237,6 +251,12 @@
                 width: 260px;
                 right: -45px;
             }
+            @include breakpoint(767px){
+                max-height: 370px;
+                width: 270px;
+                right: -85px;
+            
+            }
         }
     
         .img-2 {
@@ -253,9 +273,21 @@
                 width: 160px;
                 right: 0px;
             }
+
+            @include breakpoint(767px){
+                left: 10px;
+            }
         }
-        @media screen and (max-width:1080px) {
+        
+
+        @include breakpoint(1080px){
             width: 50%;
+            // margin: 30px;
+        }
+        @include breakpoint(767px){
+            width: 100%; 
+            
+            margin-bottom: 90px; 
         }
     }
 
