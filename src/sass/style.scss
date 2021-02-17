@@ -23,7 +23,9 @@
             align-items: center;
 
             .background-image {
-
+                img{
+                    // object-fit: cover;
+                }
                 @media (max-width: 1080px) {
                     img {
                         height: 100vh;
@@ -129,4 +131,133 @@
 
 .flickity-button-icon {
     fill: #fff;
+}
+
+
+// Parallax Section CSS
+#parallax{
+    max-height: 100vh;
+    height: 100%;
+
+    .container{
+        display: flex;
+        align-items: center;
+        padding: 100px 30px;
+
+        @media screen and (max-width:1080px) {
+            max-width: 720px;
+        }
+    
+        @media screen and (max-width:767px) {
+            
+        }
+    }
+
+    .content {
+        
+        width: 480px;
+        margin-right: 74px;
+    
+        .content-title {
+            font-family: $font-main;
+            font-size: 50px;
+            font-weight: 500;
+            font-style: normal;
+            line-height: 65px;
+            color: $title-color;
+    
+            
+            .blue-text {
+                color: #05818a;
+            }
+
+            @media screen and (max-width:1080px) {
+                font-size: 40px;
+                line-height: 45px;
+            }
+        }
+    
+        .description {
+            font-family: $font-main;
+            text-align: justify;
+            color: $description-color;
+            line-height: 25px;
+            font-size: 13px;
+            margin-bottom: 50px;  
+            
+            @media screen and (max-width:1080px) {
+                margin-bottom: 30px;
+                font-size: 14px;
+            }
+        }
+        .more-btn{
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            text-decoration: none;
+            color: $title-color;
+            
+            .arrow{
+                transition: all .3s ease;
+                padding-left: 10px;
+            }
+            &:hover{
+                color: $brand-color;
+                
+                .arrow{
+                    padding-left: 15px;
+                }
+            }
+
+            
+        }
+
+        @media screen and (max-width:1080px) {
+            width: 50%;
+            margin-right: 55px;
+        }
+
+        @media screen and (max-width:767px) {
+            width: 50%;
+        }
+    }
+    
+    .image {
+        width: 696px;
+        position: relative;
+    
+        .img-1 {
+            width: 503px;
+            height: 596px;
+            position: relative;
+            right: -83px;
+            
+            @media screen and (max-width:1080px) {
+                height: auto;
+                width: 260px;
+                right: -45px;
+            }
+        }
+    
+        .img-2 {
+            width: 280px;
+            height: 336px;
+            position: absolute;
+            bottom: -38px;
+            left: 0;
+            filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.25));
+            will-change: filter;
+
+            @media screen and (max-width:1080px) {
+                height: auto;
+                width: 160px;
+                right: 0px;
+            }
+        }
+        @media screen and (max-width:1080px) {
+            width: 50%;
+        }
+    }
+
+    
 }
