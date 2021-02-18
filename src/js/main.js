@@ -29,3 +29,17 @@ new simpleParallax(image2, {
   orientation: 'up',
   overflow: true
 });
+
+
+const parallax_image2 = document.getElementsByClassName('parallax-image2');
+new simpleParallax(parallax_image2, {
+  delay: 8,
+  orientation: 'up',
+  overflow: true
+});
+const parallax_image3 = document.getElementsByClassName('parallax-image3');
+new simpleParallax(parallax_image3, {
+  delay: 4,
+  orientation: 'up',
+  overflow: true
+});

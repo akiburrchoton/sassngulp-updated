@@ -283,3 +283,29 @@ body {
           #quote .quote-contents .signature .quote-name .designation {
             font-size: 18px;
             line-height: 1.5; } }
+
+#parallax-3-images {
+  background: url("../img/container.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0; }
+  #parallax-3-images .image-content {
+    display: flex;
+    justify-content: space-between; }
+    #parallax-3-images .image-content .image-holder .image-btn {
+      padding-top: 30px;
+      display: flex;
+      justify-content: center;
+      font-family: "Barlow", sans-serif;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2C2C2B;
+      letter-spacing: 0.1em; }
+      #parallax-3-images .image-content .image-holder .image-btn .arrow {
+        padding-left: 10px; }
+    #parallax-3-images .image-content .parallax-image2 {
+      padding-top: 60px; }
+    #parallax-3-images .image-content .parallax-image3 {
+      padding-top: 120px; }

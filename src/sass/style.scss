@@ -391,5 +391,49 @@
             }
         }
     }
-    
+}
+
+// Parallax 3 Imaages CSS
+#parallax-3-images{
+    background: url("../img/container.png");    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0;
+
+    .container{
+        
+    }
+    .image-content{
+        display: flex;
+        justify-content: space-between;
+
+        .image-holder{
+
+            .image-btn{
+                padding-top: 30px;
+                display: flex;
+                justify-content: center;
+                font-family: $btn-text;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 600;
+                color: $title-color;
+                letter-spacing: 0.1em;
+                
+                .arrow{
+                    padding-left: 10px;
+                }
+            }
+        }
+        // .parallax-image1{
+        //     padding-top: 0px;
+        // }
+        .parallax-image2{
+            padding-top: 60px;
+        }
+        .parallax-image3{
+            padding-top: 120px;
+        }
+    }
 }
