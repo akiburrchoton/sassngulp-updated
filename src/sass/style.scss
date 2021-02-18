@@ -2,6 +2,9 @@
 @import "mixin";
 @import "varriables";
 
+.blue-text {
+    color: #05818a;
+}
 
 #hero-section {
 
@@ -24,9 +27,9 @@
             align-items: center;
 
             .background-image {
-                img{
-                    // object-fit: cover;
-                }
+                // img{
+                //     // object-fit: cover;
+                // }
                 @media (max-width: 1080px) {
                     img {
                         height: 100vh;
@@ -63,16 +66,16 @@
 
             }
 
-            // &::before{
-            //     content: '';
-            //     position: absolute;
-            //     width: 100%;
-            //     height: 100%;
-            //     top: 0;
-            //     left: 0;
-            //     z-index: 2;
-            //     background: linear-gradient(0deg,rgba(89,95,112,.25),rgba(89,95,112,.25));
-            // }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                background: linear-gradient(0deg,rgba(89,95,112,.25),rgba(89,95,112,.25));
+            }
 
             @media (max-width: 1080px) {
                 height: auto;
@@ -137,7 +140,7 @@
 
 // Parallax Section CSS
 #parallax{
-    max-height: 100vh;
+    
     height: 100%;
     
     @media screen and (max-width:767px) {
@@ -146,20 +149,20 @@
     .container{
         display: flex;
         align-items: center;
-        padding: 100px 0px;
+        padding: 150px 0px;
 
         @media screen and (max-width:1080px) {
             max-width: 700px;
-            margin: 0;
             padding: 0 30px;
         }
     
         @media screen and (max-width:767px) {
             max-width: 100vw;
             width: 100%;
-            padding:100px 20px;
+            padding: 60px 30px;
             display: flex;
-            flex-direction: column-reverse!important;
+            flex-direction: column-reverse !important;
+            box-sizing: border-box;
         }
     }
 
@@ -170,8 +173,8 @@
     
 
         @media screen and (max-width:1080px) {
-            width: 45%;
-            margin-right: 55px;
+            width: 50%;
+            margin-right: 45px;
         }
 
         @media screen and (max-width:767px) {
@@ -188,10 +191,6 @@
             color: $title-color;
     
             
-            .blue-text {
-                color: #05818a;
-            }
-
             @media screen and (max-width:1080px) {
                 font-size: 40px;
                 line-height: 45px;
@@ -221,12 +220,18 @@
             .arrow{
                 transition: all .3s ease;
                 padding-left: 10px;
+                
             }
             &:hover{
                 color: $brand-color;
                 
                 .arrow{
                     padding-left: 15px;
+                    svg{
+                        path{
+                            fill: $brand-color;
+                        }
+                    }
                 }
             }
 
@@ -249,13 +254,15 @@
             @media screen and (max-width:1080px) {
                 height: auto;
                 width: 260px;
-                right: -45px;
+                right: -65px;
             }
             @include breakpoint(767px){
-                max-height: 370px;
-                width: 270px;
-                right: -85px;
-            
+
+                height: auto;
+                width: 100%;
+                padding-left: 70px;
+                box-sizing: border-box;
+                right: 0;
             }
         }
     
@@ -275,7 +282,9 @@
             }
 
             @include breakpoint(767px){
-                left: 10px;
+                height: auto;
+                width: auto;
+                max-width: 200px;
             }
         }
         
@@ -291,5 +300,96 @@
         }
     }
 
+    
+}
+
+// Quote Section CSS
+#quote{
+    padding: 90px 0;
+
+    @include breakpoint(767px){
+        padding: 30px 0;
+    }
+    .container{
+
+        @include breakpoint(1080px){
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+    }
+    .quote-contents{
+        .quote-title{
+            font-family: $font-main;
+            font-size: 50px;
+            font-weight: 600;
+            color: $title-color;
+            line-height: 130%;
+
+            @include breakpoint(1080px){
+                font-size: 40px;
+            }
+        }
+    
+        .quote-bodytext{
+            font-family: $font-main;
+            font-size: 13px;
+            font-weight: 400;
+            color: $description-color;
+            line-height: 25px;
+            margin-bottom: 57px;
+
+            @include breakpoint(767px){
+                margin-bottom: 40px;
+            }
+        }
+
+        .signature{
+            display: flex;
+            align-items: center;
+
+            .sign{
+                border-right: 1px solid $title-color;
+                padding: 15px 33px 15px 0;
+
+                img{
+                    
+                    @include breakpoint(767px){
+                        width: 133px;
+                    }
+                }
+            }
+
+            .quote-name{
+                padding-left: 33px;
+
+                @include breakpoint(767px){
+                    padding-left: 30px;
+                }
+                .name{
+                    font-family: $font-main;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin-bottom: -15px;
+                    padding: 0;
+
+                    @include breakpoint(767px){
+                        font-size: 18px;
+                    }
+                }
+                .designation{
+                    font-family: $font-main;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: $title-color;
+                    line-height: 1.5;
+
+                    @include breakpoint(767px){
+                        font-size: 18px;
+                            line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
     
 }

@@ -19,12 +19,13 @@ const image1 = document.getElementsByClassName('img-1');
 new simpleParallax(image1, {
   delay: 3,
   orientation: 'down',
-  scale: 1.1,
+  overflow: true
+ 
 });
 
 const image2 = document.getElementsByClassName('img-2');
 new simpleParallax(image2, {
   delay: 3,
   orientation: 'up',
-  scale: 1.1,
+  overflow: true
 });
