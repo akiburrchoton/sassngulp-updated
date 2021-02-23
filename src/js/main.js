@@ -43,3 +43,12 @@ new simpleParallax(parallax_image3, {
   orientation: 'up',
   overflow: true
 });
+
+var carousel_img = document.querySelector('.image-contents');
+var flkty = new Flickity( carousel_img, {
+  // options
+  cellAlign: 'left',
+  contain: true,
+  prevNextButtons: false,
+  pageDots: false
+});

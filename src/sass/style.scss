@@ -91,10 +91,6 @@
         height: 100vh;
     }
 
-
-}
-
-
 // Slider Items Custom CSS
 .flickity-button {
     position: absolute;
@@ -136,6 +132,11 @@
 .flickity-button-icon {
     fill: #fff;
 }
+
+}
+
+
+
 
 
 // Parallax Section CSS
@@ -412,6 +413,22 @@
             padding: 0 30px;
             box-sizing: border-box;
         }
+        @include breakpoint(767px){
+            padding: 0 0 0 30px;
+        }
+
+
+    }
+    .pc-tab{
+        @include breakpoint(767px){
+            display: none!important;
+        }
+    }
+    .phone{
+        display: block;
+        @include breakpoint(768px, 1920px){
+            display: none!important;
+        }
     }
     .image-content{
         display: flex;
@@ -420,6 +437,7 @@
         .image-holder{
             max-height: 530px;
             max-width: 352px;
+            margin-right: 44px;
 
             a{
                 &:hover{
@@ -429,18 +447,21 @@
             }
             img{
                 width: 100%;
-
-                @include breakpoint(1080px){
-                    // height: 100%;
-                    // width: 100%;
-                }
             }
+
             @include breakpoint(1080px){
-                
                 margin-right: 40px;
+
                 &:nth-last-child(1){
                     margin-right: 0;
                 }
+            }
+
+            @include breakpoint(767px){
+                max-width: 320px;
+                max-height: 483px;
+                // height: 100%;
+                // width: 100%;
             }
 
             .image-btn{
@@ -479,9 +500,61 @@
         }
         .parallax-image2{
             padding-top: 60px;
+
+            @include breakpoint(767px){
+                padding: 0;
+            }
         }
         .parallax-image3{
             padding-top: 120px;
+            
+            @include breakpoint(767px){
+                padding: 0;
+            }
         }
+    }
+
+    .image-contents{
+        .image-holder{
+            width: 80%;
+            margin-right: 25px;
+            text-align: center;
+            
+            img{
+                max-width: 100%;
+                max-height: 100%;
+            }
+            
+            .image-btn{
+                padding-top: 30px;
+                display: flex;
+                justify-content: center;
+                font-family: $btn-text;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 600;
+                color: $title-color;
+                letter-spacing: 0.1em;
+                
+                &:hover{
+                    color: $brand-color;
+                    
+                    .arrow{
+                        padding-left: 20px;
+
+                        svg{
+                            path{
+                                fill: $brand-color;
+                            }
+                        }
+                    }
+                }
+                .arrow{
+                    transition: all .3s ease;
+                    padding-left: 10px;
+                }
+            }
+        }
+        
     }
 }

@@ -76,36 +76,31 @@ body {
   @media (max-width: 640px) {
     #hero-section {
       height: 100vh; } }
-
-.flickity-button {
-  position: absolute;
-  background: rgba(255, 255, 255, 0); }
-  .flickity-button:hover {
+  #hero-section .flickity-button {
+    position: absolute;
     background: rgba(255, 255, 255, 0); }
-
-.flickity-prev-next-button.next {
-  top: unset;
-  bottom: 30px;
-  right: 60px; }
-
-.flickity-prev-next-button.previous {
-  top: unset;
-  bottom: 30px;
-  left: unset;
-  right: 120px; }
-
-.flickity-prev-next-button {
-  border: 1px #b5b5b5 solid;
-  width: 40px;
-  height: 40px; }
-  .flickity-prev-next-button .flickity-button-icon {
-    width: 45%;
-    height: 50%;
-    top: 25%;
-    left: 25%; }
-
-.flickity-button-icon {
-  fill: #fff; }
+    #hero-section .flickity-button:hover {
+      background: rgba(255, 255, 255, 0); }
+  #hero-section .flickity-prev-next-button.next {
+    top: unset;
+    bottom: 30px;
+    right: 60px; }
+  #hero-section .flickity-prev-next-button.previous {
+    top: unset;
+    bottom: 30px;
+    left: unset;
+    right: 120px; }
+  #hero-section .flickity-prev-next-button {
+    border: 1px #b5b5b5 solid;
+    width: 40px;
+    height: 40px; }
+    #hero-section .flickity-prev-next-button .flickity-button-icon {
+      width: 45%;
+      height: 50%;
+      top: 25%;
+      left: 25%; }
+  #hero-section .flickity-button-icon {
+    fill: #fff; }
 
 #parallax {
   height: 100%; }
@@ -297,12 +292,24 @@ body {
     #parallax-3-images .container {
       padding: 0 30px;
       box-sizing: border-box; } }
+  @media screen and (max-width: 767px) {
+    #parallax-3-images .container {
+      padding: 0 0 0 30px; } }
+  @media screen and (max-width: 767px) {
+    #parallax-3-images .pc-tab {
+      display: none !important; } }
+  #parallax-3-images .phone {
+    display: block; }
+    @media (min-width: 768px) and (max-width: 1920px) {
+      #parallax-3-images .phone {
+        display: none !important; } }
   #parallax-3-images .image-content {
     display: flex;
     justify-content: center; }
     #parallax-3-images .image-content .image-holder {
       max-height: 530px;
-      max-width: 352px; }
+      max-width: 352px;
+      margin-right: 44px; }
       #parallax-3-images .image-content .image-holder a:hover {
         filter: drop-shadow(0 0 70px rgba(0, 0, 0, 0.5)) !important;
         will-change: filter !important; }
@@ -313,6 +320,10 @@ body {
           margin-right: 40px; }
           #parallax-3-images .image-content .image-holder:nth-last-child(1) {
             margin-right: 0; } }
+      @media screen and (max-width: 767px) {
+        #parallax-3-images .image-content .image-holder {
+          max-width: 320px;
+          max-height: 483px; } }
       #parallax-3-images .image-content .image-holder .image-btn {
         padding-top: 30px;
         display: flex;
@@ -334,5 +345,37 @@ body {
           padding-left: 10px; }
     #parallax-3-images .image-content .parallax-image2 {
       padding-top: 60px; }
+      @media screen and (max-width: 767px) {
+        #parallax-3-images .image-content .parallax-image2 {
+          padding: 0; } }
     #parallax-3-images .image-content .parallax-image3 {
       padding-top: 120px; }
+      @media screen and (max-width: 767px) {
+        #parallax-3-images .image-content .parallax-image3 {
+          padding: 0; } }
+  #parallax-3-images .image-contents .image-holder {
+    width: 80%;
+    margin-right: 25px;
+    text-align: center; }
+    #parallax-3-images .image-contents .image-holder img {
+      max-width: 100%;
+      max-height: 100%; }
+    #parallax-3-images .image-contents .image-holder .image-btn {
+      padding-top: 30px;
+      display: flex;
+      justify-content: center;
+      font-family: "Barlow", sans-serif;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2C2C2B;
+      letter-spacing: 0.1em; }
+      #parallax-3-images .image-contents .image-holder .image-btn:hover {
+        color: #1c9594; }
+        #parallax-3-images .image-contents .image-holder .image-btn:hover .arrow {
+          padding-left: 20px; }
+          #parallax-3-images .image-contents .image-holder .image-btn:hover .arrow svg path {
+            fill: #1c9594; }
+      #parallax-3-images .image-contents .image-holder .image-btn .arrow {
+        transition: all .3s ease;
+        padding-left: 10px; }
