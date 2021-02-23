@@ -400,15 +400,48 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 120px 0;
+    
+    @include breakpoint(1080px){
+        margin-bottom: 300px;
+    }
 
     .container{
         
+        @include breakpoint(1080px){
+            
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
     }
     .image-content{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
 
         .image-holder{
+            max-height: 530px;
+            max-width: 352px;
+
+            a{
+                &:hover{
+                    filter: drop-shadow(0 0 70px rgba(0, 0, 0, .5))!important;
+                    will-change: filter!important;
+                }
+            }
+            img{
+                width: 100%;
+
+                @include breakpoint(1080px){
+                    // height: 100%;
+                    // width: 100%;
+                }
+            }
+            @include breakpoint(1080px){
+                
+                margin-right: 40px;
+                &:nth-last-child(1){
+                    margin-right: 0;
+                }
+            }
 
             .image-btn{
                 padding-top: 30px;
@@ -421,14 +454,29 @@
                 color: $title-color;
                 letter-spacing: 0.1em;
                 
+                &:hover{
+                    color: $brand-color;
+                    
+                    .arrow{
+                        padding-left: 20px;
+
+                        svg{
+                            path{
+                                fill: $brand-color;
+                            }
+                        }
+                    }
+                }
                 .arrow{
+                    transition: all .3s ease;
                     padding-left: 10px;
                 }
             }
         }
-        // .parallax-image1{
-        //     padding-top: 0px;
-        // }
+        .parallax-image1{
+            
+            
+        }
         .parallax-image2{
             padding-top: 60px;
         }

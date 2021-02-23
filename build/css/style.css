@@ -290,21 +290,48 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 120px 0; }
+  @media screen and (max-width: 1080px) {
+    #parallax-3-images {
+      margin-bottom: 300px; } }
+  @media screen and (max-width: 1080px) {
+    #parallax-3-images .container {
+      padding: 0 30px;
+      box-sizing: border-box; } }
   #parallax-3-images .image-content {
     display: flex;
-    justify-content: space-between; }
-    #parallax-3-images .image-content .image-holder .image-btn {
-      padding-top: 30px;
-      display: flex;
-      justify-content: center;
-      font-family: "Barlow", sans-serif;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      color: #2C2C2B;
-      letter-spacing: 0.1em; }
-      #parallax-3-images .image-content .image-holder .image-btn .arrow {
-        padding-left: 10px; }
+    justify-content: center; }
+    #parallax-3-images .image-content .image-holder {
+      max-height: 530px;
+      max-width: 352px; }
+      #parallax-3-images .image-content .image-holder a:hover {
+        filter: drop-shadow(0 0 70px rgba(0, 0, 0, 0.5)) !important;
+        will-change: filter !important; }
+      #parallax-3-images .image-content .image-holder img {
+        width: 100%; }
+      @media screen and (max-width: 1080px) {
+        #parallax-3-images .image-content .image-holder {
+          margin-right: 40px; }
+          #parallax-3-images .image-content .image-holder:nth-last-child(1) {
+            margin-right: 0; } }
+      #parallax-3-images .image-content .image-holder .image-btn {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        font-family: "Barlow", sans-serif;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        color: #2C2C2B;
+        letter-spacing: 0.1em; }
+        #parallax-3-images .image-content .image-holder .image-btn:hover {
+          color: #1c9594; }
+          #parallax-3-images .image-content .image-holder .image-btn:hover .arrow {
+            padding-left: 20px; }
+            #parallax-3-images .image-content .image-holder .image-btn:hover .arrow svg path {
+              fill: #1c9594; }
+        #parallax-3-images .image-content .image-holder .image-btn .arrow {
+          transition: all .3s ease;
+          padding-left: 10px; }
     #parallax-3-images .image-content .parallax-image2 {
       padding-top: 60px; }
     #parallax-3-images .image-content .parallax-image3 {
