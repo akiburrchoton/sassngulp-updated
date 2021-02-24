@@ -438,9 +438,11 @@
             max-height: 530px;
             max-width: 352px;
             margin-right: 44px;
-
+            
             a{
+                transition: all .5s ease;
                 &:hover{
+
                     filter: drop-shadow(0 0 70px rgba(0, 0, 0, .5))!important;
                     will-change: filter!important;
                 }

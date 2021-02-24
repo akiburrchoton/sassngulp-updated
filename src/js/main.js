@@ -5,7 +5,7 @@ var flkty = new Flickity( elem, {
   contain: true,
   fade: true,
   draggable: false,
-  autoPlay: 123456,
+  autoPlay: 5000,
   pageDots: false,
   pauseAutoPlayOnHover: false,
 });
@@ -50,5 +50,5 @@ var flkty = new Flickity( carousel_img, {
   cellAlign: 'left',
   contain: true,
   prevNextButtons: false,
-  pageDots: false
+  pageDots: false,
 });
