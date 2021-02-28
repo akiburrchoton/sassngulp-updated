@@ -287,7 +287,7 @@ body {
   padding: 120px 0; }
   @media screen and (max-width: 1080px) {
     #parallax-3-images {
-      margin-bottom: 300px; } }
+      padding: 80px 0; } }
   @media screen and (max-width: 1080px) {
     #parallax-3-images .container {
       padding: 0 30px;
@@ -381,3 +381,57 @@ body {
       #parallax-3-images .image-contents .image-holder .image-btn .arrow {
         transition: all .3s ease;
         padding-left: 10px; }
+
+#connect .container {
+  text-align: center;
+  padding: 80px 0; }
+  #connect .container .connect-title {
+    padding-bottom: 80px; }
+    #connect .container .connect-title h1 {
+      font-family: "Manrope", sans-serif;
+      font-weight: 600;
+      font-size: 50px;
+      line-height: 130%; }
+      @media screen and (max-width: 1080px) {
+        #connect .container .connect-title h1 {
+          font-size: 40px; } }
+  #connect .container .gallery .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px; }
+  #connect .container .gallery .image-holder {
+    margin-left: 10px;
+    margin-right: 10px; }
+  #connect .container .desktop {
+    display: block;
+    margin-bottom: 100px; }
+    @media screen and (max-width: 1080px) {
+      #connect .container .desktop {
+        display: none; } }
+  #connect .container .phone {
+    display: none; }
+    @media screen and (max-width: 1080px) {
+      #connect .container .phone {
+        display: block;
+        margin-bottom: 80px; } }
+  #connect .container .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #connect .container .social-media .social-icons {
+      margin-right: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 270px; }
+    #connect .container .social-media .hashtag {
+      font-family: Barlow;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 130%;
+      letter-spacing: 0.1em;
+      color: #1c9594; }
+      #connect .container .social-media .hashtag .blue-text {
+        margin: 0;
+        margin-top: -4px; }

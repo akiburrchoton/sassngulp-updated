@@ -30,7 +30,7 @@ new simpleParallax(image2, {
   overflow: true
 });
 
-
+// Parallax 3 Images JS
 const parallax_image2 = document.getElementsByClassName('parallax-image2');
 new simpleParallax(parallax_image2, {
   delay: 8,
@@ -51,4 +51,16 @@ var flkty = new Flickity( carousel_img, {
   contain: true,
   prevNextButtons: false,
   pageDots: false,
+});
+
+// Image Gallery JS
+
+var gallery_carosel = document.querySelector('.gallery');
+var flkty = new Flickity( gallery_carosel, {
+  // options
+  // cellAlign: 'left',
+  contain: true,
+  prevNextButtons: false,
+  pageDots: false,
+  wrapAround: true
 });
