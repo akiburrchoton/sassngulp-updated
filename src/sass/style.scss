@@ -27,9 +27,7 @@
             align-items: center;
 
             .background-image {
-                // img{
-                //     // object-fit: cover;
-                // }
+                
                 @media (max-width: 1080px) {
                     img {
                         height: 100vh;
@@ -566,7 +564,6 @@
 // Connect Section CSS
 #connect{
 
-
     .container{
         text-align: center;
         padding: 80px 0;
@@ -641,7 +638,14 @@
                 width: 270px;
 
                 a{
-                    
+                    transition: all .4s ease;
+                    &:hover{
+                        svg{
+                            path{
+                                fill: $brand-color;
+                            }
+                        }
+                    }
                 }                
             }
 
@@ -662,5 +666,87 @@
                 }
             }
         }
+    }
+}
+
+
+// Footer CSS 
+#footer{
+    background: url("../img/container.png");    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 55px 0;
+    
+    @include breakpoint(1080px){
+        
+    }
+    .container{
+        
+        .footer-content{
+
+            .logo{
+                margin-bottom: 45px;
+            }
+
+            .footer-info{
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                justify-content: space-between;
+                margin-bottom: 115px;
+                .col{
+                    font-family: $font-main;
+                    font-size: 13px;
+                    color: $description-color;
+                    .title{
+                        font-weight: 600;
+                        line-height: 190%;
+                        letter-spacing: 0.03em;
+                        margin: 0;
+                    }
+
+                    .info{
+                        margin: 0;
+                        font-weight: 400;
+                        line-height: 190%;
+                        letter-spacing: 0.03em;
+                        a{
+                            color: $description-color;
+                            text-decoration: none!important;
+                        }
+                        
+                    }
+                }
+
+
+            }
+            .copyright{
+                display: flex;
+                justify-content: space-between;
+                font-weight: 400;
+                line-height: 190%;
+                letter-spacing: 0.03em;
+                color: $title-color;
+                font-family: $font-main;
+                font-size: 13px;
+                color:#2C2C2B;
+                
+                .copyright-text{
+                    margin: 0;
+                }
+                
+                .credit{
+                    margin: 0;
+                    a{
+                        color:#2C2C2B;
+                        font-weight: 600;
+                        text-decoration: none!important;
+                    }
+                }
+            }
+        
+        }
+
+        
     }
 }
