@@ -2,7 +2,7 @@
 @mixin breakpoint($width...) {
     
     @if length($width) == 1{
-        @media (min-width: nth($width , 1)) {
+        @media screen and (max-width: nth($width , 1)) {
             @content;
         }
     } @else {

@@ -1,7 +1,14 @@
 @import "base";
+@import "mixin";
 @import "varriables";
 
+.blue-text {
+    color: #05818a;
+}
 
+// HOME PAGE CSS STARTS HERE 
+
+// Hero Section CSS 
 #hero-section {
 
     width: 100%;
@@ -23,7 +30,7 @@
             align-items: center;
 
             .background-image {
-
+                
                 @media (max-width: 1080px) {
                     img {
                         height: 100vh;
@@ -49,6 +56,7 @@
                     padding: 0 30px;
                     font-size: 25px;
                     line-height: 1.7;
+                    // color: red;
                 }
 
                 @media screen and (max-width:767px) {
@@ -59,16 +67,16 @@
 
             }
 
-            // &::before{
-            //     content: '';
-            //     position: absolute;
-            //     width: 100%;
-            //     height: 100%;
-            //     top: 0;
-            //     left: 0;
-            //     z-index: 2;
-            //     background: linear-gradient(0deg,rgba(89,95,112,.25),rgba(89,95,112,.25));
-            // }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                background: linear-gradient(0deg,rgba(89,95,112,.25),rgba(89,95,112,.25));
+            }
 
             @media (max-width: 1080px) {
                 height: auto;
@@ -83,10 +91,6 @@
     @media (max-width: 640px) {
         height: 100vh;
     }
-
-
-}
-
 
 // Slider Items Custom CSS
 .flickity-button {
@@ -129,3 +133,1041 @@
 .flickity-button-icon {
     fill: #fff;
 }
+
+}
+
+// Parallax Section CSS
+#parallax{
+    
+    height: 100%;
+    
+    @media screen and (max-width:767px) {
+        height: auto;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        padding: 150px 0px;
+
+        @media screen and (max-width:1080px) {
+            max-width: 700px;
+            padding: 0 30px;
+        }
+    
+        @media screen and (max-width:767px) {
+            max-width: 100vw;
+            width: 100%;
+            padding: 60px 30px;
+            display: flex;
+            flex-direction: column-reverse !important;
+            box-sizing: border-box;
+        }
+    }
+
+    .content {
+        
+        width: 480px;
+        margin-right: 74px;
+    
+
+        @media screen and (max-width:1080px) {
+            width: 50%;
+            margin-right: 45px;
+        }
+
+        @media screen and (max-width:767px) {
+            width: 100%;
+            margin: 0;
+        }
+
+        .content-title {
+            font-family: $font-main;
+            font-size: 50px;
+            font-weight: 500;
+            font-style: normal;
+            line-height: 65px;
+            color: $title-color;
+    
+            
+            @media screen and (max-width:1080px) {
+                font-size: 40px;
+                line-height: 45px;
+            }
+        }
+    
+        .description {
+            font-family: $font-main;
+            text-align: justify;
+            color: $description-color;
+            line-height: 25px;
+            font-size: 13px;
+            margin-bottom: 50px;  
+            
+            @media screen and (max-width:1080px) {
+                margin-bottom: 30px;
+                font-size: 14px;
+            }
+        }
+        .more-btn{
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            text-decoration: none;
+            color: $title-color;
+            
+            .arrow{
+                transition: all .3s ease;
+                padding-left: 10px;
+                
+            }
+            &:hover{
+                color: $brand-color;
+                
+                .arrow{
+                    padding-left: 15px;
+                    svg{
+                        path{
+                            fill: $brand-color;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+
+        
+    }
+    
+    .image {
+        width: 696px;
+        position: relative;
+    
+        .img-1 {
+            width: 503px;
+            height: 596px;
+            position: relative;
+            right: -83px;
+            
+            @media screen and (max-width:1080px) {
+                height: auto;
+                width: 260px;
+                right: -65px;
+            }
+            @include breakpoint(767px){
+
+                height: auto;
+                width: 100%;
+                padding-left: 70px;
+                box-sizing: border-box;
+                right: 0;
+            }
+        }
+    
+        .img-2 {
+            width: 280px;
+            height: 336px;
+            position: absolute;
+            bottom: -38px;
+            left: 0;
+            filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.25));
+            will-change: filter;
+
+            @media screen and (max-width:1080px) {
+                height: auto;
+                width: 160px;
+                right: 0px;
+            }
+
+            @include breakpoint(767px){
+                height: auto;
+                width: auto;
+                max-width: 200px;
+            }
+        }
+        
+
+        @include breakpoint(1080px){
+            width: 50%;
+            // margin: 30px;
+        }
+        @include breakpoint(767px){
+            width: 100%; 
+            
+            margin-bottom: 90px; 
+        }
+    }
+
+    
+}
+
+// Quote Section CSS
+#quote{
+    padding: 90px 0;
+
+    @include breakpoint(767px){
+        padding: 30px 0;
+    }
+    .container{
+
+        @include breakpoint(1080px){
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+    
+        .quote-contents{
+            .quote-title{
+                font-family: $font-main;
+                font-size: 50px;
+                font-weight: 600;
+                color: $title-color;
+                line-height: 130%;
+                margin: 0 0 40px 0;
+                @include breakpoint(1080px){
+                    font-size: 40px;
+                }
+            }
+        
+            .quote-bodytext{
+                font-family: $font-main;
+                font-size: 13px;
+                font-weight: 400;
+                color: $description-color;
+                line-height: 25px;
+                margin: 0 0 40px 0;
+
+                @include breakpoint(767px){
+                    margin-bottom: 40px;
+                }
+            }
+
+            .more-btn{
+                font-family: 'Barlow', sans-serif;
+                font-weight: 600;
+                font-size: 13px;
+                text-decoration: none;
+                color: $title-color;
+                
+                .arrow{
+                    transition: all .3s ease;
+                    padding-left: 10px;
+                    
+                }
+                &:hover{
+                    color: $brand-color;
+                    
+                    .arrow{
+                        padding-left: 15px;
+                        svg{
+                            path{
+                                fill: $brand-color;
+                            }
+                        }
+                    }
+                }
+    
+                
+            }
+
+            .signature{
+                display: flex;
+                align-items: center;
+
+                .sign{
+                    border-right: 1px solid $title-color;
+                    padding: 15px 33px 15px 0;
+
+                    img{
+                        
+                        @include breakpoint(767px){
+                            width: 133px;
+                        }
+                    }
+                }
+
+                .quote-name{
+                    padding-left: 33px;
+
+                    @include breakpoint(767px){
+                        padding-left: 30px;
+                    }
+                    .name{
+                        font-family: $font-main;
+                        font-weight: 600;
+                        line-height: 1.5;
+                        margin-bottom: -15px;
+                        padding: 0;
+
+                        @include breakpoint(767px){
+                            font-size: 18px;
+                        }
+                    }
+                    .designation{
+                        font-family: $font-main;
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: $title-color;
+                        line-height: 1.5;
+
+                        @include breakpoint(767px){
+                            font-size: 18px;
+                                line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Parallax 3 Imaages CSS
+#parallax-3-images{
+    background: url("../img/container.png");    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0;
+    
+    @include breakpoint(1080px){
+        padding: 80px 0;
+    }
+
+    .container{
+        
+        @include breakpoint(1080px){
+            
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+        @include breakpoint(767px){
+            padding: 0 0 0 30px;
+        }
+
+
+    }
+    .pc-tab{
+        @include breakpoint(767px){
+            display: none!important;
+        }
+    }
+    .phone{
+        display: block;
+        @include breakpoint(768px, 1920px){
+            display: none!important;
+        }
+    }
+    .image-content{
+        display: flex;
+        justify-content: center;
+
+        .image-holder{
+            max-height: 530px;
+            max-width: 352px;
+            margin-right: 44px;
+            
+            a{
+                transition: all .5s ease;
+                &:hover{
+
+                    filter: drop-shadow(0 0 70px rgba(0, 0, 0, .5))!important;
+                    will-change: filter!important;
+                }
+            }
+            img{
+                width: 100%;
+            }
+
+            @include breakpoint(1080px){
+                margin-right: 40px;
+
+                &:nth-last-child(1){
+                    margin-right: 0;
+                }
+            }
+
+            @include breakpoint(767px){
+                max-width: 320px;
+                max-height: 483px;
+                // height: 100%;
+                // width: 100%;
+            }
+
+            .image-btn{
+                padding-top: 30px;
+                display: flex;
+                justify-content: center;
+                font-family: $btn-text;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 600;
+                color: $title-color;
+                letter-spacing: 0.1em;
+                
+                &:hover{
+                    color: $brand-color;
+                    
+                    .arrow{
+                        padding-left: 20px;
+
+                        svg{
+                            path{
+                                fill: $brand-color;
+                            }
+                        }
+                    }
+                }
+                .arrow{
+                    transition: all .3s ease;
+                    padding-left: 10px;
+                }
+            }
+        }
+        .parallax-image1{
+            
+            
+        }
+        .parallax-image2{
+            padding-top: 60px;
+
+            @include breakpoint(767px){
+                padding: 0;
+            }
+        }
+        .parallax-image3{
+            padding-top: 120px;
+            
+            @include breakpoint(767px){
+                padding: 0;
+            }
+        }
+    }
+
+    .image-contents{
+        .image-holder{
+            width: 80%;
+            margin-right: 25px;
+            text-align: center;
+            
+            img{
+                max-width: 100%;
+                max-height: 100%;
+            }
+            
+            .image-btn{
+                padding-top: 30px;
+                display: flex;
+                justify-content: center;
+                font-family: $btn-text;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 600;
+                color: $title-color;
+                letter-spacing: 0.1em;
+                
+                &:hover{
+                    color: $brand-color;
+                    
+                    .arrow{
+                        padding-left: 20px;
+
+                        svg{
+                            path{
+                                fill: $brand-color;
+                            }
+                        }
+                    }
+                }
+                .arrow{
+                    transition: all .3s ease;
+                    padding-left: 10px;
+                }
+            }
+        }
+        
+    }
+}
+
+
+// Connect Section CSS
+#connect{
+
+    .container{
+        text-align: center;
+        padding: 80px 0;
+
+        .connect-title{
+            padding-bottom: 80px;
+
+            
+            h1{
+                font-family: $font-main;
+                font-weight: 600;
+                font-size: 50px;
+                line-height: 130%;
+                @include breakpoint(1080px){
+                    font-size: 40px;
+                }
+            }
+        }
+
+        .gallery{
+            
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-gap: 20px;
+                
+                .grid-item{
+                    
+
+                    img{
+
+                    }
+                }
+            }
+
+            .image-holder{
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            
+        }
+
+        .desktop{
+            display: block;
+            margin-bottom: 100px;
+
+            @include breakpoint(1080px){
+                display: none;
+            }
+        }
+
+        .phone{
+            display: none;
+            
+            @include breakpoint(1080px){
+                display: block;
+                margin-bottom: 80px;
+            }
+        }
+
+        .social-media{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include breakpoint(767px){
+                display: block;
+            }
+            .social-icons{
+                margin-right: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 270px;
+
+                @include breakpoint(767px){
+                    width: 100%;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                }
+                a{
+                    @include breakpoint(767px){
+                        margin-right: 50px;
+                        &:nth-last-child(1){
+                            margin-right: 0;
+                        }
+                    }
+                    transition: all .4s ease;
+                    &:hover{
+                        svg{
+                            path{
+                                fill: $brand-color;
+                            }
+                        }
+                    }
+                }                
+            }
+
+            .hashtag{
+                font-family: Barlow;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 130%;
+
+                letter-spacing: 0.1em;
+
+                color: $brand-color;
+
+                .blue-text{
+                    margin: 0;
+                    margin-top: -4px;
+                }
+            }
+        }
+    }
+}
+
+
+// Footer CSS 
+#footer{
+    background: url("../img/container.png");    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 55px 0;
+    
+    @include breakpoint(1080px){
+        
+    }
+    .container{
+        
+        .footer-content{
+
+            @include breakpoint(1080px){
+                padding: 0 30px;
+            }
+            @include breakpoint(767px){
+                padding: 0 25px;
+            }
+            .logo{
+                margin-bottom: 45px;
+            }
+
+            .footer-info{
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                justify-content: space-between;
+                margin-bottom: 50px;
+
+                @include breakpoint(767px){
+                    grid-template-columns: auto;
+                }
+                .col{
+                    font-family: $font-main;
+                    font-size: 13px;
+                    color: $description-color;
+
+                    @include breakpoint(767px){
+                        margin-bottom: 35px;
+                    }
+                    .title{
+                        font-weight: 600;
+                        line-height: 190%;
+                        letter-spacing: 0.03em;
+                        margin: 0;
+                    }
+
+                    .info{
+                        margin: 0;
+                        font-weight: 400;
+                        line-height: 190%;
+                        letter-spacing: 0.03em;
+                        a{
+                            color: $description-color;
+                            text-decoration: none!important;
+                        }
+                        
+                    }
+                }
+
+
+            }
+            .copyright{
+                display: flex;
+                justify-content: space-between;
+                font-weight: 400;
+                line-height: 190%;
+                letter-spacing: 0.03em;
+                color: $title-color;
+                font-family: $font-main;
+                font-size: 13px;
+                color:#2C2C2B;
+
+                @include breakpoint(767px){
+                    display: block;
+                }
+                .copyright-text{
+                    margin: 0;
+                    
+                    @include breakpoint(767px){
+                        margin-bottom: 35px;
+                    }
+                }
+                
+                .credit{
+                    margin: 0;
+                    a{
+                        color:#2C2C2B;
+                        font-weight: 600;
+                        text-decoration: none!important;
+                    }
+                }
+            }
+        
+        }
+
+        
+    }
+}
+// HOME PAGE CSS ENDS HERE 
+
+
+// WHAT WE DO PAGE CSS STARTS HERE
+
+// Hero Section CSS 
+#hero-section {
+
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    // background-color: red;
+
+    .slider-cell {
+        max-width: 100vw;
+        width: 100%;
+        max-height: 100vh;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .background-image {
+            height: 100%;
+            width: 100%;
+            
+            img {
+                height: 100vh;
+                width: 100vw;
+                object-fit: cover;
+                object-position: left;
+
+                @media (max-width: 1080px) {
+                    height: 100vh;
+                    width: 100vw;
+                    object-fit: cover;
+                    object-position: left;
+                }
+            }
+        }
+
+        .slider-caption {
+            // margin: 0 auto;
+            font-family: $font-main;
+            max-width: 835px;
+            color: #fff;
+            font-size: 26px;
+            line-height: 44px;
+            font-weight: 500;
+            letter-spacing: .02em;
+            position: absolute;
+            z-index: 5;
+
+            @media screen and (max-width:1080px) {
+                padding: 0 30px;
+                font-size: 25px;
+                line-height: 1.7;
+                // color: red;
+            }
+
+            @media screen and (max-width:767px) {
+                // color: blue;
+                font-size: 20px;
+            }
+
+
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            max-width: 100vw;
+            width: 100%;
+            max-height: 100vh;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            background: linear-gradient(0deg,rgba(89,95,112,.25),rgba(89,95,112,.25));
+        }
+
+        @media (max-width: 1080px) {
+            height: auto;
+        }
+
+        @media (max-width: 767px) {
+            // width: auto;
+        }
+    }
+    @media (max-width: 640px) {
+        height: 100vh;
+    }
+
+
+}
+
+// Parallax Section CSS
+#parallax-whatwedo{
+    
+    height: 100%;
+    
+    @media screen and (max-width:767px) {
+        height: auto;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        padding: 150px 0px;
+
+        @media screen and (max-width:1080px) {
+            max-width: 700px;
+            padding: 0 30px;
+        }
+    
+        @media screen and (max-width:767px) {
+            max-width: 100vw;
+            width: 100%;
+            padding: 60px 30px;
+            display: flex;
+            flex-direction: column-reverse !important;
+            box-sizing: border-box;
+        }
+    }
+
+    .content {
+        
+        width: 490px;
+        margin-right: 0;
+    
+
+        @media screen and (max-width:1080px) {
+            width: 50%;
+            margin-right: 45px;
+        }
+
+        @media screen and (max-width:767px) {
+            width: 100%;
+            margin: 0;
+        }
+
+        .content-title {
+            font-family: $font-main;
+            font-size: 50px;
+            font-weight: 500;
+            font-style: normal;
+            line-height: 65px;
+            color: $title-color;
+    
+            
+            @media screen and (max-width:1080px) {
+                font-size: 40px;
+                line-height: 45px;
+            }
+        }
+    
+        .description {
+            font-family: $font-main;
+            text-align: justify;
+            color: $description-color;
+            line-height: 25px;
+            font-size: 13px;
+            margin-bottom: 50px;  
+            
+            @media screen and (max-width:1080px) {
+                margin-bottom: 30px;
+                font-size: 14px;
+            }
+        }
+        .more-btn{
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            text-decoration: none;
+            color: $title-color;
+            margin-right:50px;
+            letter-spacing: 0.1em;
+            .arrow{
+                transition: all .3s ease;
+                padding-left: 10px;
+                
+            }
+            &:hover{
+                color: $brand-color;
+                
+                .arrow{
+                    padding-left: 15px;
+                    svg{
+                        path{
+                            fill: $brand-color;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+
+        
+    }
+    
+    .image {
+        width: 696px;
+        position: relative;
+    
+        .img-1 {
+            width: 503px;
+            height: 596px;
+            position: relative;
+            left: 0px;
+            
+            @media screen and (max-width:1080px) {
+                height: auto;
+                width: 260px;
+                right: -65px;
+            }
+            @include breakpoint(767px){
+
+                height: auto;
+                width: 100%;
+                padding-left: 70px;
+                box-sizing: border-box;
+                right: 0;
+            }
+        }
+    
+        .img-2 {
+            width: 280px;
+            height: 336px;
+            position: absolute;
+            bottom: -38px;
+            right: 0;
+            margin-right: 74px;
+            filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.25));
+            will-change: filter;
+
+            @media screen and (max-width:1080px) {
+                height: auto;
+                width: 160px;
+                right: 0px;
+            }
+
+            @include breakpoint(767px){
+                height: auto;
+                width: auto;
+                max-width: 200px;
+            }
+        }
+        
+
+        @include breakpoint(1080px){
+            width: 50%;
+            // margin: 30px;
+        }
+        @include breakpoint(767px){
+            width: 100%; 
+            
+            margin-bottom: 90px; 
+        }
+    }    
+}
+
+// Paragraph Section CSS
+#paragraph{
+    margin-bottom: 100px;
+    .container{
+        max-width: 1140px;
+        width: 100%;
+
+
+        .paragraph-content{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+
+            .paragraph-half{
+                width: 480px;
+
+                .para-title{
+                    font-family: $font-main;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 180%;
+                    color: $title-color;
+                }
+
+                .para-body{
+                    font-family: $font-main;
+                    font-weight: normal;
+                    font-size: 13px;
+                    line-height: 190%;
+                    letter-spacing: 0.03em;
+                    color: $description-color;
+                }
+            }
+        }
+    }
+}
+
+// Cards Section CSS
+#cards{
+    .container{
+
+        .card-contents{
+            padding: 120px 0;
+            .grid-container{
+                display: grid;
+                grid-template-columns: auto auto auto auto ;
+                grid-row-gap: 50px;                
+                .card-item{
+                    padding:53px 40px;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        background: url("../img/container.jpg");
+                        
+                        .hidden-cardtext{
+                            padding-top: 0;
+                            display: block;
+                        }
+                    }
+
+                    .number{
+                        font-family: $btn-text;
+                        font-weight: 600;
+                        font-size: 13px;
+                        line-height: 130%;
+                        letter-spacing: 0.25em;
+                        color: rgba(44, 44, 43, 0.25);
+                    }
+
+                    .card-text{
+                        font-family: $font-main;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 180%;
+                        color: $title-color;
+                        margin: 0;
+                    }
+
+                    .hidden-cardtext{
+                        font-family: $font-main;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 180%;
+                        display: none;
+                        margin: 0;
+                        padding-top: 20px;
+                        transition: all .4s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+} 
+
