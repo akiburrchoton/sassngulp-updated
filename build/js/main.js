@@ -33,8 +33,10 @@ new simpleParallax(image2, {
 // Parallax 3 Images JS
 const parallax_image2 = document.getElementsByClassName('parallax-image2');
 new simpleParallax(parallax_image2, {
-  delay: 8,
+  delay: 4,
   orientation: 'up',
+  
+  maxTransition: 85,
   overflow: true
 });
 const parallax_image3 = document.getElementsByClassName('parallax-image3');
