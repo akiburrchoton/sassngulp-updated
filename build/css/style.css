@@ -536,11 +536,11 @@ body {
         font-weight: 600;
         text-decoration: none !important; }
 
-#hero-section {
+#hero-section2 {
   width: 100%;
   height: 100vh;
   position: relative; }
-  #hero-section .slider-cell {
+  #hero-section2 .slider-cell {
     max-width: 100vw;
     width: 100%;
     max-height: 100vh;
@@ -548,21 +548,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
-    #hero-section .slider-cell .background-image {
+    #hero-section2 .slider-cell .background-image {
       height: 100%;
       width: 100%; }
-      #hero-section .slider-cell .background-image img {
+      #hero-section2 .slider-cell .background-image img {
         height: 100vh;
         width: 100vw;
         object-fit: cover;
         object-position: left; }
         @media (max-width: 1080px) {
-          #hero-section .slider-cell .background-image img {
+          #hero-section2 .slider-cell .background-image img {
             height: 100vh;
             width: 100vw;
             object-fit: cover;
             object-position: left; } }
-    #hero-section .slider-cell .slider-caption {
+    #hero-section2 .slider-cell .slider-caption {
       font-family: "Manrope", sans-serif;
       max-width: 835px;
       color: #fff;
@@ -573,14 +573,14 @@ body {
       position: absolute;
       z-index: 5; }
       @media screen and (max-width: 1080px) {
-        #hero-section .slider-cell .slider-caption {
+        #hero-section2 .slider-cell .slider-caption {
           padding: 0 30px;
-          font-size: 25px;
+          font-size: 20px;
           line-height: 1.7; } }
       @media screen and (max-width: 767px) {
-        #hero-section .slider-cell .slider-caption {
+        #hero-section2 .slider-cell .slider-caption {
           font-size: 20px; } }
-    #hero-section .slider-cell::before {
+    #hero-section2 .slider-cell::before {
       content: '';
       position: absolute;
       max-width: 100vw;
@@ -592,14 +592,17 @@ body {
       z-index: 2;
       background: linear-gradient(0deg, rgba(89, 95, 112, 0.25), rgba(89, 95, 112, 0.25)); }
     @media (max-width: 1080px) {
-      #hero-section .slider-cell {
+      #hero-section2 .slider-cell {
         height: auto; } }
   @media (max-width: 640px) {
-    #hero-section {
+    #hero-section2 {
       height: 100vh; } }
 
 #parallax-whatwedo {
   height: 100%; }
+  @media screen and (max-width: 1080px) {
+    #parallax-whatwedo {
+      margin-bottom: 50px; } }
   @media screen and (max-width: 767px) {
     #parallax-whatwedo {
       height: auto; } }
@@ -615,9 +618,8 @@ body {
       #parallax-whatwedo .container {
         max-width: 100vw;
         width: 100%;
-        padding: 60px 30px;
-        display: flex;
-        flex-direction: column-reverse !important;
+        padding: 60px 30px 0;
+        display: block;
         box-sizing: border-box; } }
   #parallax-whatwedo .content {
     width: 490px;
@@ -652,23 +654,28 @@ body {
         #parallax-whatwedo .content .description {
           margin-bottom: 30px;
           font-size: 14px; } }
-    #parallax-whatwedo .content .more-btn {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 600;
-      font-size: 13px;
-      text-decoration: none;
-      color: #2C2C2B;
-      margin-right: 50px;
-      letter-spacing: 0.1em; }
-      #parallax-whatwedo .content .more-btn .arrow {
-        transition: all .3s ease;
-        padding-left: 10px; }
-      #parallax-whatwedo .content .more-btn:hover {
-        color: #1c9594; }
-        #parallax-whatwedo .content .more-btn:hover .arrow {
-          padding-left: 15px; }
-          #parallax-whatwedo .content .more-btn:hover .arrow svg path {
-            fill: #1c9594; }
+    #parallax-whatwedo .content .btn-holder {
+      display: flex; }
+      @media screen and (max-width: 1080px) {
+        #parallax-whatwedo .content .btn-holder {
+          display: block; } }
+      #parallax-whatwedo .content .btn-holder .more-btn {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        text-decoration: none;
+        color: #2C2C2B;
+        margin-right: 50px;
+        letter-spacing: 0.1em; }
+        #parallax-whatwedo .content .btn-holder .more-btn .arrow {
+          transition: all .3s ease;
+          padding-left: 10px; }
+        #parallax-whatwedo .content .btn-holder .more-btn:hover {
+          color: #1c9594; }
+          #parallax-whatwedo .content .btn-holder .more-btn:hover .arrow {
+            padding-left: 15px; }
+            #parallax-whatwedo .content .btn-holder .more-btn:hover .arrow svg path {
+              fill: #1c9594; }
   #parallax-whatwedo .image {
     width: 696px;
     position: relative; }
@@ -680,15 +687,14 @@ body {
       @media screen and (max-width: 1080px) {
         #parallax-whatwedo .image .img-1 {
           height: auto;
-          width: 260px;
+          max-width: 260px;
+          width: 100%;
           right: -65px; } }
       @media screen and (max-width: 767px) {
         #parallax-whatwedo .image .img-1 {
-          height: auto;
-          width: 100%;
-          padding-left: 70px;
-          box-sizing: border-box;
-          right: 0; } }
+          max-width: 370px;
+          padding-right: 40px;
+          box-sizing: border-box; } }
     #parallax-whatwedo .image .img-2 {
       width: 280px;
       height: 336px;
@@ -702,12 +708,15 @@ body {
         #parallax-whatwedo .image .img-2 {
           height: auto;
           width: 160px;
-          right: 0px; } }
+          right: -30px; } }
       @media screen and (max-width: 767px) {
         #parallax-whatwedo .image .img-2 {
-          height: auto;
+          max-height: 208px;
           width: auto;
-          max-width: 200px; } }
+          padding-right: 0px;
+          margin: 0;
+          box-sizing: border-box;
+          right: 0; } }
     @media screen and (max-width: 1080px) {
       #parallax-whatwedo .image {
         width: 50%; } }
@@ -721,12 +730,31 @@ body {
   #paragraph .container {
     max-width: 1140px;
     width: 100%; }
+    @media screen and (max-width: 1080px) {
+      #paragraph .container {
+        padding: 0 30px;
+        box-sizing: border-box; } }
+    @media screen and (max-width: 767px) {
+      #paragraph .container {
+        box-sizing: border-box; } }
     #paragraph .container .paragraph-content {
       width: 100%;
       display: flex;
       justify-content: space-between; }
+      @media screen and (max-width: 767px) {
+        #paragraph .container .paragraph-content {
+          display: block; } }
       #paragraph .container .paragraph-content .paragraph-half {
         width: 480px; }
+        @media screen and (max-width: 767px) {
+          #paragraph .container .paragraph-content .paragraph-half {
+            width: 100%; } }
+        @media screen and (max-width: 1080px) {
+          #paragraph .container .paragraph-content .paragraph-half:nth-last-child(1) {
+            margin-left: 30px; } }
+        @media screen and (max-width: 767px) {
+          #paragraph .container .paragraph-content .paragraph-half:nth-last-child(1) {
+            margin-left: 0px; } }
         #paragraph .container .paragraph-content .paragraph-half .para-title {
           font-family: "Manrope", sans-serif;
           font-weight: 600;
@@ -743,10 +771,18 @@ body {
 
 #cards .container .card-contents {
   padding: 120px 0; }
+  @media screen and (max-width: 1080px) {
+    #cards .container .card-contents {
+      padding: 100px 30px;
+      box-sizing: border-box; } }
   #cards .container .card-contents .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-row-gap: 50px; }
+    @media screen and (max-width: 1080px) {
+      #cards .container .card-contents .grid-container {
+        grid-template-columns: auto auto;
+        grid-row-gap: 50px; } }
     #cards .container .card-contents .grid-container .card-item {
       padding: 53px 40px;
       transition: all .3s ease; }
